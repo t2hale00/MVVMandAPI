@@ -12,7 +12,7 @@ data class Todo(
     var completed: Boolean
 )
 
-const val BASE_URL = " https://jsonplaceholder.typicode.com"
+const val BASE_URL = "https://jsonplaceholder.typicode.com"
 
 
 interface TodosApi {
@@ -28,7 +28,7 @@ interface TodosApi {
                 todosService = Retrofit.Builder()
                     .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
-                    .build().create(TodosApi:: class.java)
+                    .build().create(TodosApi::class.java)
             }
             return todosService!!
         }

@@ -1,6 +1,7 @@
 package com.example.mvvmandapi.viewmodel
 
 import android.util.Log
+import androidx.compose.runtime.mutableStateListOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.mvvmandapi.model.Todo
@@ -9,7 +10,7 @@ import kotlinx.coroutines.launch
 
 
 class TodoViewModel: ViewModel() {
-    var todos = mutableListOf<Todo>()
+    var todos = mutableStateListOf<Todo>()
         private set
 
     init {
